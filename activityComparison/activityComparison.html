@@ -1,0 +1,61 @@
+<div class="container-fluid" data-ng-repeat="item in reportmeta | filter: { report : 'activityComparison' }">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-title">{{item.title}} <small>report {{item.class}}</small></h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <p class="explanation">This report is for {{item.description}}</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div filters></div>
+        </div>
+    </div>
+
+    <div class="row" data-ng-show="item.output.indexOf('barchart') != -1">
+        <div class="col-md-12 color yellow">
+            <div class="portlet">
+                <div class="portlet-title">
+                    <div class="caption">
+                        {{item.title}} Bar Chart
+                    </div>
+                        <div class="actions">
+                            <div tools></div>
+                        </div>
+                </div>
+                <div class="portlet-body">
+                        <div activity-comparison-cht></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" data-ng-show="item.output.indexOf('table') != -1">
+        <div class="col-md-12 color teal">
+            <div class="portlet">
+                <div class="portlet-title">
+                    <div class="caption">
+                        {{item.title}} Table
+                    </div>
+                        <div class="actions">
+                            <div tools></div>
+                        </div>
+                </div>
+                <div class="portlet-body">
+                        <div activity-comparison-tbl></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+

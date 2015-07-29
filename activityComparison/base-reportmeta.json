@@ -1,0 +1,187 @@
+[
+  {
+    "reportid": 4,
+    "report": "activityComparison",
+    "class": "for viewing users and groups",
+    "title": "Activity Comparison",
+    "description": "how a user (or users) object activities (and logins) compares to a selected group's averages.",
+    "output": [
+      "table",
+      "barchart"
+    ],
+    "minlevel": 1,
+    "display": true,
+    "aggregation": true,
+    "filters": [
+      "objects",
+      "actions"
+    ],
+    "combos": [
+      "licenses",
+      "groups",
+      "users",
+      "profiles",
+      "regions",
+      "managers"
+    ]
+  },
+  {
+    "reportid": 5,
+    "report": "loginFrequency",
+    "title": "Login Frequency",
+    "description": "users' login history, including those who haven't logged in within a certain number of days.",
+    "output": [
+      "table",
+      "pie"
+    ],
+    "minlevel": 1,
+    "display": true,
+    "filters": []
+  },
+  {
+    "reportid": 1,
+    "report": "lowUsageUsers",
+    "title": "Low Usage Users",
+    "class": "for viewing users",
+    "description": "users that have logged in and done activities but not enough to meet my minimum target.",
+    "output": [
+      "table"
+    ],
+    "minlevel": 1,
+    "display": true,
+    "filters": [
+      "objects",
+      "actions"
+    ],
+    "status": [],
+    "combos": [
+      "licenses",
+      "groups",
+      "managers",
+      "profiles",
+      "regions",
+      "users"
+    ]
+  },
+  {
+    "reportid": 2,
+    "report": "objectActivityByGroup",
+    "title": "Object Activity by Group",
+    "class": "for viewing groups",
+    "description": "how different groups are using the salesforce objects.",
+    "output": [
+      "table",
+      "barchart"
+    ],
+    "minlevel": 1,
+    "display": true,
+    "filters": [
+      "objects"
+    ],
+    "combos": [
+      "licenses",
+      "groups",
+      "managers",
+      "profiles",
+      "regions"
+    ]
+  },
+  {
+    "reportid": 8,
+    "report": "objectActivityTotals",
+    "title": "Object Activity Totals",
+    "class": "for viewing totals",
+    "description": "how much each monitored Salesforce object is being used.",
+    "output": [
+      "table",
+      "barchart"
+    ],
+    "minlevel": 1,
+    "display": true,
+    "filters": [
+      "objects"
+    ],
+    "combos": [
+      "licenses",
+      "groups",
+      "managers",
+      "profiles",
+      "regions"
+    ]
+  },
+  {
+    "reportid": 9,
+    "report": "objectActivityTrends",
+    "title": "Object Activity Trends",
+    "class": "for viewing trends",
+    "description": "how Salesforce object activity has changed over time.",
+    "output": [
+      "table",
+      "barchart"
+    ],
+    "minlevel": 1,
+    "display": true,
+    "aggregation": true,
+    "filters": [
+      "objects"
+    ],
+    "combos": [
+      "licenses",
+      "groups",
+      "users",
+      "profiles",
+      "regions"
+    ]
+  },
+  {
+    "reportid": 12,
+    "report": "usageActivity",
+    "title": "Usage Activity",
+    "description": "users' activities during a set time range.",
+    "output": [
+      "table",
+      "pie"
+    ],
+    "minlevel": 1,
+    "display": true,
+    "filters": []
+  },
+  {
+    "reportid": 3,
+    "report": "userActivityCustom",
+    "title": "User Activity Custom",
+    "class": "for viewing users",
+    "description": "and filter the details of user/s' logins and object activities/actions.",
+    "output": [
+      "table",
+      "barchart"
+    ],
+    "minlevel": 1,
+    "display": true,
+    "aggregation": true,
+    "filters": [
+      "objects"
+    ],
+    "combos": [
+      "licenses",
+      "groups",
+      "managers",
+      "profiles",
+      "regions"
+    ]
+  },
+  {
+    "reportid": 6,
+    "report": "userActivityDetails",
+    "title": "User Activity Details",
+    "class": "for viewing an individual user",
+    "description": "the daily details of a single user's logins and object activities. Show tabular output of all activities for a specific user. Exportable.",
+    "output": [
+      "table"
+    ],
+    "minlevel": 1,
+    "display": true,
+    "aggregation": true,
+    "filters": []
+  }
+]

@@ -1,0 +1,570 @@
+{
+  "generatedReportId": "",
+  "generated": 1,
+  "columns": [
+    "Object",
+    "Action",
+    "User",
+    "Group Value",
+    "User Value"
+  ],
+  "reportmeta": {
+    "reportId": "activityComparison",
+    "creatorId": "tim@cloudco.com",
+    "customerId": "CloudCoDemo",
+    "createdOn": null,
+    "isAutoCreated": true
+  },
+  "selections": {
+    "application": {
+      "label": "Salesforce",
+      "grouptype": "application",
+      "id": 2
+    },
+    "aggregation": {
+      "label": "weekly",
+      "grouptype": "aggregation",
+      "id": 5
+    },
+    "fromDate": "2014-02-01",
+    "toDate": "2015-04-30",
+    "objects": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "actions": [],
+    "sets": [
+      {
+        "tuples": [
+          "users"
+        ],
+        "users": [
+          12,
+          33,
+          21,
+          31
+        ],
+        "groups": [
+          1,
+          2
+        ],
+        "licenses": [],
+        "regions": [],
+        "profiles": []
+      },
+      {
+        "tuples": [
+          "managers"
+        ],
+        "managers": [
+          12,
+          33,
+          21,
+          31
+        ],
+        "groups": [
+          1
+        ],
+        "licenses": [],
+        "regions": [],
+        "profiles": [
+          2
+        ]
+      },
+      {
+        "tuples": [
+          "licenses",
+          "regions"
+        ],
+        "users": [
+          12,
+          33,
+          21,
+          31
+        ],
+        "groups": [],
+        "licenses": [
+          1
+        ],
+        "regions": [
+          1,
+          2
+        ],
+        "profiles": []
+      }
+    ]
+  },
+  "datasets": {
+    "paging": {
+      "offset": 0,
+      "limit": 10000,
+      "total": 40
+    },
+    "rows": [
+      [
+        "Account",
+        "Create",
+        "Dalia Anderson",
+        1.418269231,
+        0
+      ],
+      [
+        "Account",
+        "Update",
+        "Dalia Anderson",
+        88.46634615,
+        0
+      ],
+      [
+        "Campaign",
+        "Create",
+        "Dalia Anderson",
+        0.1875,
+        0
+      ],
+      [
+        "Campaign",
+        "Update",
+        "Dalia Anderson",
+        0.5,
+        0
+      ],
+      [
+        "Contact",
+        "Create",
+        "Dalia Anderson",
+        27.12980769,
+        0
+      ],
+      [
+        "Contact",
+        "Update",
+        "Dalia Anderson",
+        127.7692308,
+        6
+      ],
+      [
+        "Lead",
+        "Create",
+        "Dalia Anderson",
+        0.08653846154,
+        2
+      ],
+      [
+        "Lead",
+        "Update",
+        "Dalia Anderson",
+        46.02403846,
+        4
+      ],
+      [
+        "Opportunity",
+        "Create",
+        "Dalia Anderson",
+        15.48557692,
+        0
+      ],
+      [
+        "Opportunity",
+        "Update",
+        "Dalia Anderson",
+        170.0817308,
+        0
+      ],
+      [
+        "Account",
+        "Create",
+        "Hulda Ali",
+        1.418269231,
+        4
+      ],
+      [
+        "Account",
+        "Update",
+        "Hulda Ali",
+        88.46634615,
+        10
+      ],
+      [
+        "Campaign",
+        "Create",
+        "Hulda Ali",
+        0.1875,
+        0
+      ],
+      [
+        "Campaign",
+        "Update",
+        "Hulda Ali",
+        0.5,
+        0
+      ],
+      [
+        "Contact",
+        "Create",
+        "Hulda Ali",
+        27.12980769,
+        12
+      ],
+      [
+        "Contact",
+        "Update",
+        "Hulda Ali",
+        127.7692308,
+        16
+      ],
+      [
+        "Lead",
+        "Create",
+        "Hulda Ali",
+        0.08653846154,
+        0
+      ],
+      [
+        "Lead",
+        "Update",
+        "Hulda Ali",
+        46.02403846,
+        17
+      ],
+      [
+        "Opportunity",
+        "Create",
+        "Hulda Ali",
+        15.48557692,
+        5
+      ],
+      [
+        "Opportunity",
+        "Update",
+        "Hulda Ali",
+        170.0817308,
+        17
+      ],
+      [
+        "Account",
+        "Create",
+        "Leon Hall",
+        1.418269231,
+        2
+      ],
+      [
+        "Account",
+        "Update",
+        "Leon Hall",
+        88.46634615,
+        177
+      ],
+      [
+        "Campaign",
+        "Create",
+        "Leon Hall",
+        0.1875,
+        0
+      ],
+      [
+        "Campaign",
+        "Update",
+        "Leon Hall",
+        0.5,
+        0
+      ],
+      [
+        "Contact",
+        "Create",
+        "Leon Hall",
+        27.12980769,
+        44
+      ],
+      [
+        "Contact",
+        "Update",
+        "Leon Hall",
+        127.7692308,
+        286
+      ],
+      [
+        "Lead",
+        "Create",
+        "Leon Hall",
+        0.08653846154,
+        1
+      ],
+      [
+        "Lead",
+        "Update",
+        "Leon Hall",
+        46.02403846,
+        69
+      ],
+      [
+        "Opportunity",
+        "Create",
+        "Leon Hall",
+        15.48557692,
+        36
+      ],
+      [
+        "Opportunity",
+        "Update",
+        "Leon Hall",
+        170.0817308,
+        292
+      ],
+      [
+        "Account",
+        "Create",
+        "Don Duncan",
+        1.418269231,
+        4
+      ],
+      [
+        "Account",
+        "Update",
+        "Don Duncan",
+        88.46634615,
+        101
+      ],
+      [
+        "Campaign",
+        "Create",
+        "Don Duncan",
+        0.1875,
+        0
+      ],
+      [
+        "Campaign",
+        "Update",
+        "Don Duncan",
+        0.5,
+        0
+      ],
+      [
+        "Contact",
+        "Create",
+        "Don Duncan",
+        27.12980769,
+        13
+      ],
+      [
+        "Contact",
+        "Update",
+        "Don Duncan",
+        127.7692308,
+        44
+      ],
+      [
+        "Lead",
+        "Create",
+        "Don Duncan",
+        0.08653846154,
+        0
+      ],
+      [
+        "Lead",
+        "Update",
+        "Don Duncan",
+        46.02403846,
+        120
+      ],
+      [
+        "Opportunity",
+        "Create",
+        "Don Duncan",
+        15.48557692,
+        28
+      ],
+      [
+        "Opportunity",
+        "Update",
+        "Don Duncan",
+        170.0817308,
+        193
+      ]
+    ],
+    "chart": [
+      {
+        "key": "Dalia Anderson",
+        "values": [
+          {
+            "x": "Account Create",
+            "y": 25
+          },
+          {
+            "x": "Account Update",
+            "y": 48
+          },
+          {
+            "x": "Campaign Create",
+            "y": 67
+          },
+          {
+            "x": "Campaign Update",
+            "y": 45
+          },
+          {
+            "x": "Contact Create",
+            "y": 22
+          },
+          {
+            "x": "Contact Update",
+            "y": 78
+          },
+          {
+            "x": "Lead Create",
+            "y": 55
+          },
+          {
+            "x": "Lead Update",
+            "y": 61
+          },
+          {
+            "x": "Opportunity Create",
+            "y": 23
+          },
+          {
+            "x": "Opportunity Update",
+            "y": 27
+          }
+        ]
+      },
+      {
+        "key": "Hulda Ali",
+        "values": [
+          {
+            "x": "Account Create",
+            "y": 44
+          },
+          {
+            "x": "Account Update",
+            "y": 59
+          },
+          {
+            "x": "Campaign Create",
+            "y": 43
+          },
+          {
+            "x": "Campaign Update",
+            "y": 54
+          },
+          {
+            "x": "Contact Create",
+            "y": 27
+          },
+          {
+            "x": "Contact Update",
+            "y": 60
+          },
+          {
+            "x": "Lead Create",
+            "y": 37
+          },
+          {
+            "x": "Lead Update",
+            "y": 66
+          },
+          {
+            "x": "Opportunity Create",
+            "y": 68
+          },
+          {
+            "x": "Opportunity Update",
+            "y": 67
+          }
+        ]
+      },
+      {
+        "key": "Leon Hall",
+        "values": [
+          {
+            "x": "Account Create",
+            "y": 75
+          },
+          {
+            "x": "Account Update",
+            "y": 35
+          },
+          {
+            "x": "Campaign Create",
+            "y": 76
+          },
+          {
+            "x": "Campaign Update",
+            "y": 67
+          },
+          {
+            "x": "Contact Create",
+            "y": 17
+          },
+          {
+            "x": "Contact Update",
+            "y": 53
+          },
+          {
+            "x": "Lead Create",
+            "y": 58
+          },
+          {
+            "x": "Lead Update",
+            "y": 42
+          },
+          {
+            "x": "Opportunity Create",
+            "y": 40
+          },
+          {
+            "x": "Opportunity Update",
+            "y": 22
+          }
+        ]
+      },
+      {
+        "key": "Don Duncan",
+        "values": [
+          {
+            "x": "Account Create",
+            "y": 77
+          },
+          {
+            "x": "Account Update",
+            "y": 35
+          },
+          {
+            "x": "Campaign Create",
+            "y": 53
+          },
+          {
+            "x": "Campaign Update",
+            "y": 75
+          },
+          {
+            "x": "Contact Create",
+            "y": 24
+          },
+          {
+            "x": "Contact Update",
+            "y": 70
+          },
+          {
+            "x": "Lead Create",
+            "y": 80
+          },
+          {
+            "x": "Lead Update",
+            "y": 80
+          },
+          {
+            "x": "Opportunity Create",
+            "y": 39
+          },
+          {
+            "x": "Opportunity Update",
+            "y": 46
+          }
+        ]
+      }
+    ]
+  }
+}

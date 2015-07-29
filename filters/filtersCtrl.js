@@ -13,5 +13,16 @@ app.controller('filtersCtrl', ['$scope',
             $scope.status.isopen = !$scope.status.isopen;
         };
 
+        $scope.removeQuery = function(val) {
+            $scope.dataSelections.sets[val] = {
+                "tuples": [],
+                "managers": [],
+                "groups": [],
+                "licenses": [],
+                "regions": [],
+                "profiles": []
+            };
+        };
+
     }
 ]);

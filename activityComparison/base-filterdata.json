@@ -1,0 +1,236 @@
+[
+  {
+    "static": {
+      "status": [
+        {
+          "label": "active only",
+          "grouptype": "status",
+          "id": 1
+        },
+        {
+          "label": "include inactive",
+          "grouptype": "status",
+          "id": 2
+        }
+      ],
+      "application": [
+        {
+          "label": "Box",
+          "grouptype": "application",
+          "id": 1
+        },
+        {
+          "label": "Salesforce",
+          "grouptype": "application",
+          "id": 2
+        }
+      ],
+      "aggregation": [
+        {
+          "label": "daily",
+          "grouptype": "aggregation",
+          "id": 1
+        },
+        {
+          "label": "weekly",
+          "grouptype": "aggregation",
+          "id": 5
+        },
+        {
+          "label": "monthly",
+          "grouptype": "aggregation",
+          "id": 2
+        },
+        {
+          "label": "yearly",
+          "grouptype": "aggregation",
+          "id": 3
+        },
+        {
+          "label": "single period",
+          "grouptype": "aggregation",
+          "id": 4
+        }
+      ]
+    },
+    "variables": [
+      {
+        "grouptype": "objects",
+        "children": [
+          {
+            "label": "Account",
+            "grouptype": "objects",
+            "id": 1
+          },
+          {
+            "label": "Campaign",
+            "grouptype": "objects",
+            "id": 2
+          },
+          {
+            "label": "Contact",
+            "grouptype": "objects",
+            "id": 3
+          },
+          {
+            "label": "Lead",
+            "grouptype": "objects",
+            "id": 4
+          },
+          {
+            "label": "Login",
+            "grouptype": "objects",
+            "id": 5
+          },
+          {
+            "label": "Opportunity",
+            "grouptype": "objects",
+            "id": 6
+          }
+        ]
+      },
+      {
+        "grouptype": "actions",
+        "children": [
+          {
+            "label": "create",
+            "grouptype": "actions",
+            "id": 1
+          },
+          {
+            "label": "update",
+            "grouptype": "actions",
+            "id": 2
+          },
+          {
+            "label": "delete",
+            "grouptype": "actions",
+            "id": 3
+          },
+          {
+            "label": "undelete",
+            "grouptype": "actions",
+            "id": 4
+          }
+        ]
+      }
+    ],
+    "limits": [
+      {
+        "grouptype": "licenses",
+        "children": [
+          {
+            "label": "Chatter Free",
+            "grouptype": "licenses",
+            "id": 1
+          },
+          {
+            "label": "SFDC",
+            "grouptype": "licenses",
+            "id": 2
+          }
+        ]
+      },
+      {
+        "grouptype": "groups",
+        "children": [
+          {
+            "label": "Chatter Free Use",
+            "grouptype": "groups",
+            "id": 1
+          },
+          {
+            "label": "Marketing",
+            "grouptype": "groups",
+            "id": 2
+          },
+          {
+            "label": "Sales-EU",
+            "grouptype": "groups",
+            "id": 3
+          },
+          {
+            "label": "Sales-US",
+            "grouptype": "groups",
+            "id": 4
+          },
+          {
+            "label": "Sales2",
+            "grouptype": "groups",
+            "id": 5
+          },
+          {
+            "label": "System Admin",
+            "grouptype": "groups",
+            "id": 6
+          }
+        ]
+      },
+      {
+        "grouptype": "regions",
+        "children": [
+          {
+            "label": "N Africa",
+            "grouptype": "regions",
+            "id": 6
+          },
+          {
+            "label": "Europe",
+            "grouptype": "regions",
+            "id": 1
+          },
+          {
+            "label": "US",
+            "grouptype": "regions",
+            "id": 2
+          },
+          {
+            "label": "Cen America",
+            "grouptype": "regions",
+            "id": 3
+          },
+          {
+            "label": "Australia",
+            "grouptype": "regions",
+            "id": 4
+          },
+          {
+            "label": "S Asia",
+            "grouptype": "regions",
+            "id": 5
+          },
+          {
+            "label": "CE Europe",
+            "grouptype": "regions",
+            "id": 7
+          }
+        ]
+      },
+      {
+        "grouptype": "profiles",
+        "children": [
+          {
+            "label": "profile E",
+            "grouptype": "profiles",
+            "id": 3
+          },
+          {
+            "label": "profile G",
+            "grouptype": "profiles",
+            "id": 4
+          },
+          {
+            "label": "profile Y",
+            "grouptype": "profiles",
+            "id": 1
+          },
+          {
+            "label": "profile N",
+            "grouptype": "profiles",
+            "id": 2
+          }
+        ]
+      }
+    ]
+  }
+]

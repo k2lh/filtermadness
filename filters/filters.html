@@ -1,7 +1,6 @@
-
 <!-- ===== STATIC OPTIONS ===== -->
     <form class="form-inline">
-        <H4>BASE</h4>
+
         <div class="form-group">
             <div class="btn-group" dropdown on-toggle="toggled(open)">
                 <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle>
@@ -128,7 +127,7 @@
     <div class="clear breaknew"></div>
 
     <form class="form-inline" data-ng-show="item.combos">
-    <H4>SET 1</h4>
+
         <div class="form-group">
             <div class="btn-group" dropdown on-toggle="toggled(open)">
                 <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle>
@@ -177,124 +176,134 @@
             </div>
         </div>
 
-        <button type="button" class="btn btn-success">NNN users match.</button>
-        <button type="button" class="btn btn-warning">No matches found!</button>
+        <button type="button" class="btn btn-success" ng-show="query0success">NNN users match.</button>
+        <button type="button" class="btn btn-warning" ng-show="query0fail">No matches found!</button>
     </form>
 
 <!-- ===== LIMITS OPTIONS --- SET1 ===== -->
 
-    <div class="clear breaknew"></div>
 
-    <form class="form-inline" data-ng-show="item.combos">
-    <H4>SET 2</h4>
-        <div class="form-group">
-            <div class="btn-group" dropdown on-toggle="toggled(open)">
-                <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle>
-                    <span data-ng-show="dataSelections.sets[1].tuples.length > 0 && dataSelections.sets[1].tuples.length !== reportmeta.tuples.length">
-                        <span data-ng-repeat="t in dataSelections.sets[1].tuples">{{t}}{{$last ? '' : ' + '}}</span>
-                    </span>
-                    <span data-ng-hide="dataSelections.sets[1].tuples.length > 0 && dataSelections.sets[1].tuples.length !== reportmeta.tuples.length">Select tuples</span>
-                </button>
-                <ul class="dropdown-menu dropcheck" data-ng-click="$event.stopPropagation()" >
-                    <li data-ng-repeat="combo in item.combos" class="checkbox">
-                        <label>
-                            <input
-                                data-ng-if="dataSelections.sets[1]"
-                                type="checkbox"
-                                checkbox-list
-                                selections="dataSelections.sets[1].tuples"
-                                item="combo"
-                                set="tuples" /> {{combo}}
-                        </label>
-                    </li>
-                </ul>
+        <div class="clear breaknew"></div>
+
+        <form class="form-inline" data-ng-show="item.combos" >
+            <button class="btn btn-default" ng-click="queryCollapse1 = !queryCollapse1" ng-show="queryCollapse1">add query</button>
+            <div collapse="queryCollapse1">
+                <div class="form-group">
+                    <div class="btn-group" dropdown on-toggle="toggled(open)">
+                        <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle>
+                            <span data-ng-show="dataSelections.sets[1].tuples.length > 0 && dataSelections.sets[1].tuples.length !== reportmeta.tuples.length">
+                                <span data-ng-repeat="t in dataSelections.sets[1].tuples">{{t}}{{$last ? '' : ' + '}}</span>
+                            </span>
+                            <span data-ng-hide="dataSelections.sets[1].tuples.length > 0 && dataSelections.sets[1].tuples.length !== reportmeta.tuples.length">Select tuples</span>
+                        </button>
+                        <ul class="dropdown-menu dropcheck" data-ng-click="$event.stopPropagation()" >
+                            <li data-ng-repeat="combo in item.combos" class="checkbox">
+                                <label>
+                                    <input
+                                        data-ng-if="dataSelections.sets[1]"
+                                        type="checkbox"
+                                        checkbox-list
+                                        selections="dataSelections.sets[1].tuples"
+                                        item="combo"
+                                        set="tuples" /> {{combo}}
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div data-ng-repeat="things in filterlim" class="form-group margleft15" >
+                    <div class="btn-group" dropdown on-toggle="toggled(open)">
+                        <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle>
+                            <span data-ng-if="dataSelections.sets[1][things.grouptype].length > 0 && dataSelections.sets[1][things.grouptype].length !== filtervar[things.grouptype].length">{{dataSelections.sets[1][things.grouptype].length}}</span>
+                            <span data-ng-if="dataSelections.sets[1][things.grouptype].length == 0">All </span>
+                            {{things.grouptype}}
+                        </button>
+                        <ul class="dropdown-menu dropcheck" data-ng-click="$event.stopPropagation()" >
+                            <li data-ng-repeat="thing in things.children track by $index" class="checkbox">
+                                <label>
+                                    <input
+                                        data-ng-if="dataSelections.sets[1]"
+                                        type="checkbox"
+                                        checkbox-list
+                                        selections="dataSelections.sets[1][things.grouptype]"
+                                        set="{{things.grouptype}}"
+                                        item="thing.id" />
+                                        {{thing.label}}
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="btn btn-danger" ng-click="queryCollapse1 = !queryCollapse1; removeQuery(1)"><span class="icon icon-remove"></span></button>
+                <button type="button" class="btn btn-success" ng-show="query1success">NNN users match.</button>
+                <button type="button" class="btn btn-warning" ng-show="query1fail">No matches found!</button>
             </div>
-        </div>
-
-        <div data-ng-repeat="things in filterlim" class="form-group margleft15" >
-            <div class="btn-group" dropdown on-toggle="toggled(open)">
-                <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle>
-                    <span data-ng-if="dataSelections.sets[1][things.grouptype].length > 0 && dataSelections.sets[1][things.grouptype].length !== filtervar[things.grouptype].length">{{dataSelections.sets[1][things.grouptype].length}}</span>
-                    <span data-ng-if="dataSelections.sets[1][things.grouptype].length == 0">All </span>
-                    {{things.grouptype}}
-                </button>
-                <ul class="dropdown-menu dropcheck" data-ng-click="$event.stopPropagation()" >
-                    <li data-ng-repeat="thing in things.children track by $index" class="checkbox">
-                        <label>
-                            <input
-                                data-ng-if="dataSelections.sets[1]"
-                                type="checkbox"
-                                checkbox-list
-                                selections="dataSelections.sets[1][things.grouptype]"
-                                set="{{things.grouptype}}"
-                                item="thing.id" />
-                                {{thing.label}}
-                        </label>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <button type="button" class="btn btn-success">NNN users match.</button>
-        <button type="button" class="btn btn-warning">No matches found!</button>
-    </form>
+        </form>
 
 
 <!-- ===== LIMITS OPTIONS --- SET2 ===== -->
 
+
+        <div class="clear breaknew"></div>
+
+        <form class="form-inline" data-ng-show="item.combos">
+            <button class="btn btn-default" ng-click="queryCollapse2 = !queryCollapse2" ng-show="!queryCollapse1 && queryCollapse2">add query</button>
+            <div collapse="queryCollapse2">
+                <div class="form-group">
+                    <div class="btn-group" dropdown on-toggle="toggled(open)">
+                        <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle>
+                            <span data-ng-show="dataSelections.sets[2].tuples.length > 0 && dataSelections.sets[2].tuples.length !== reportmeta.tuples.length">
+                                <span data-ng-repeat="t in dataSelections.sets[2].tuples">{{t}}{{$last ? '' : ' + '}}</span>
+                            </span>
+                            <span data-ng-hide="dataSelections.sets[2].tuples.length > 0 && dataSelections.sets[2].tuples.length !== reportmeta.tuples.length">Select tuples</span>
+                        </button>
+                        <ul class="dropdown-menu dropcheck" data-ng-click="$event.stopPropagation()" >
+                            <li data-ng-repeat="combo in item.combos" class="checkbox">
+                                <label>
+                                    <input
+                                        data-ng-if="dataSelections.sets[2]"
+                                        type="checkbox"
+                                        checkbox-list
+                                        selections="dataSelections.sets[2].tuples"
+                                        item="combo"
+                                        set="tuples" /> {{combo}}
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div data-ng-repeat="things in filterlim" class="form-group margleft15" >
+                    <div class="btn-group" dropdown on-toggle="toggled(open)">
+                        <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle>
+                            <span data-ng-if="dataSelections.sets[2][things.grouptype].length > 0 && dataSelections.sets[2][things.grouptype].length !== filtervar[things.grouptype].length">{{dataSelections.sets[2][things.grouptype].length}}</span>
+                            <span data-ng-if="dataSelections.sets[2][things.grouptype].length == 0">All </span>
+                            {{things.grouptype}}
+                        </button>
+                        <ul class="dropdown-menu dropcheck" data-ng-click="$event.stopPropagation()" >
+                            <li data-ng-repeat="thing in things.children track by $index" class="checkbox">
+                                <label>
+                                    <input
+                                        data-ng-if="dataSelections.sets[2]"
+                                        type="checkbox"
+                                        checkbox-list
+                                        selections="dataSelections.sets[2][things.grouptype]"
+                                        set="{{things.grouptype}}"
+                                        item="thing.id" />
+                                        {{thing.label}}
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="btn btn-danger" ng-click="queryCollapse2 = !queryCollapse2; removeQuery(2)"><span class="icon icon-remove"></span></button>
+                <button type="button" class="btn btn-success" ng-show="query2success">NNN users match.</button>
+                <button type="button" class="btn btn-warning" ng-show="query2fail">No matches found!</button>
+            </div>
+        </form>
+
+
+
     <div class="clear breaknew"></div>
-
-    <form class="form-inline" data-ng-show="item.combos">
-    <H4>SET 3</h4>
-        <div class="form-group">
-            <div class="btn-group" dropdown on-toggle="toggled(open)">
-                <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle>
-                    <span data-ng-show="dataSelections.sets[2].tuples.length > 0 && dataSelections.sets[2].tuples.length !== reportmeta.tuples.length">
-                        <span data-ng-repeat="t in dataSelections.sets[2].tuples">{{t}}{{$last ? '' : ' + '}}</span>
-                    </span>
-                    <span data-ng-hide="dataSelections.sets[2].tuples.length > 0 && dataSelections.sets[2].tuples.length !== reportmeta.tuples.length">Select tuples</span>
-                </button>
-                <ul class="dropdown-menu dropcheck" data-ng-click="$event.stopPropagation()" >
-                    <li data-ng-repeat="combo in item.combos" class="checkbox">
-                        <label>
-                            <input
-                                data-ng-if="dataSelections.sets[2]"
-                                type="checkbox"
-                                checkbox-list
-                                selections="dataSelections.sets[2].tuples"
-                                item="combo"
-                                set="tuples" /> {{combo}}
-                        </label>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div data-ng-repeat="things in filterlim" class="form-group margleft15" >
-            <div class="btn-group" dropdown on-toggle="toggled(open)">
-                <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle>
-                    <span data-ng-if="dataSelections.sets[2][things.grouptype].length > 0 && dataSelections.sets[2][things.grouptype].length !== filtervar[things.grouptype].length">{{dataSelections.sets[2][things.grouptype].length}}</span>
-                    <span data-ng-if="dataSelections.sets[2][things.grouptype].length == 0">All </span>
-                    {{things.grouptype}}
-                </button>
-                <ul class="dropdown-menu dropcheck" data-ng-click="$event.stopPropagation()" >
-                    <li data-ng-repeat="thing in things.children track by $index" class="checkbox">
-                        <label>
-                            <input
-                                data-ng-if="dataSelections.sets[2]"
-                                type="checkbox"
-                                checkbox-list
-                                selections="dataSelections.sets[2][things.grouptype]"
-                                set="{{things.grouptype}}"
-                                item="thing.id" />
-                                {{thing.label}}
-                        </label>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <button type="button" class="btn btn-success">NNN users match.</button>
-        <button type="button" class="btn btn-warning">No matches found!</button>
-        <!--<div type="button" class="btn btn-primary" data-ng-if="dataSelections.sets[2].tuples.length > 0"  data-ng-click="clearSet(2)">Clear this set.</div>-->
-    </form>
+    <button class="btn btn-primary" >get results</button>
